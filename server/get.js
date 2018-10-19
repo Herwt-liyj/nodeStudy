@@ -7,6 +7,7 @@ var server = http.createServer(function(request,response) {
 
     //解析url
     var params = url.parse(request.url,true).query;
+    console.log(params)
     response.write('网站名称：'+ params.name);
     response.write('\n');
     response.write('网站地址：' + params.url);
